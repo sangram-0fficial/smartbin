@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>images slider</title>
+	<link rel="stylesheet" type="text/css" href="imageslider.css">
+</head>
+<body>
+<div id="container1">
+<img class="slides" src="sliderpic/Slide1.JPG"/>
+<img class="slides" src="sliderpic/Slide2.JPG"/>
+<img class="slides" src="sliderpic/Slide3.JPG"/>
+<img class="slides" src="sliderpic/Slide4.JPG"/>
+<img class="slides" src="sliderpic/Slide5.JPG"/>
+<img class="slides" src="sliderpic/Slide6.JPG"/>
+<img class="slides" src="sliderpic/Slide7.JPG"/>
+<img class="slides" src="sliderpic/Slide8.JPG"/>
+<img class="slides" src="sliderpic/Slide9.JPG"/>
+<img class="slides" src="sliderpic/Slide10.JPG"/>
+<img class="slides" src="sliderpic/Slide11.JPG"/>
+<img class="slides" src="sliderpic/Slide12.JPG"/>
+<img class="slides" src="sliderpic/Slide13.JPG"/>
+<img class="slides" src="sliderpic/Slide14.JPG"/>
+<img class="slides" src="sliderpic/Slide15.JPG"/>
+<img class="slides" src="sliderpic/Slide16.JPG"/>
+<img class="slides" src="sliderpic/Slide17.JPG"/>
+<img class="slides" src="sliderpic/Slide18.JPG"/>
+<img class="slides" src="sliderpic/Slide18.JPG"/>
+<img class="slides" src="sliderpic/Slide19.JPG"/>
+<img class="slides" src="sliderpic/Slide20.JPG"/>
+<img class="slides" src="sliderpic/Slide21.JPG"/>
+<img class="slides" src="sliderpic/Slide22.JPG"/>
+<img class="slides" src="sliderpic/Slide23.JPG"/>
+<button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094;</button>
+<button class="btn" onclick="plusIndex(1)" id="btn2">&#10095;</button>
+
+</div>
+</body>
+<script>
+	var index = 1;
+    function plusIndex(n){
+        index = index + 1;
+        showImage(index);
+   }
+    showImage(1);
+    function showImage(n){
+        var i;
+        var x =document.getElementsByClassName("slides");
+        if(n > x.length){ index = 1};
+        if(n < 1){ index = x.length};
+        for(i=0;i<x.length;i++)
+        {
+            x[i].style.display = "none";
+        }
+            x[index-1].style.display = "block";
+        }
+    
+</script>
+</html>
